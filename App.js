@@ -4,6 +4,8 @@ import Constants from "expo-constants";
 import Topbar from "./Components/Topbar/Topbar";
 import axios from "axios";
 import SwipeImage from "./Components/SwipeImage/SwipeImage";
+import BottomBar from "./Components/BottomBar/BottomBar";
+import Swipes from "./Components/Swipes/Swipes";
 
 export default function App() {
   const [users, setUsers] = useState([]);
@@ -31,8 +33,10 @@ export default function App() {
     <View style={styles.container}>
       <Topbar />
       <View style={styles.swipes}>
-        {users.length > 1 && <SwipeImage user={users[currentIndex]} />}
+        {users.length > 1 && <Swipes></Swipes>}
+      <BottomBar/>
       </View>
+      
     </View>
   );
 }
@@ -55,4 +59,5 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 7,
   },
+  
 });

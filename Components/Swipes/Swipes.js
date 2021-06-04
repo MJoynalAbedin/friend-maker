@@ -24,7 +24,7 @@ export default function Swipes(users, currentIndex, handleLike, handlePass) {
 return (
     
     <RectButton style = {styles.container}>
-    <SwipeImage users ={users[currentIndex + 1]}>
+    <SwipeImage userss ={users[currentIndex + 1]}>
 
     </SwipeImage>
 </RectButton>
@@ -50,7 +50,7 @@ return (
        onSwipeableRightWillOpen = {() => setWillPass(true)}
        
        >
-<SwipeImage user={users[currentIndex]} willLike ={willLike} willPass={willPass} />
+<SwipeImage users={users[currentIndex]} willLike ={willLike} willPass={willPass} />
        </Swipeable>
     )
 }

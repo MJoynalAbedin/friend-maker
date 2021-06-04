@@ -2,10 +2,10 @@ import React from "react";
 import { View, Image, StyleSheet, Text } from "react-native";
 
 
-export default function SwipeImage({ user, willLike, willPass }) {
+export default function SwipeImage({ users, willLike, willPass }) {
   return (
     <View>
-      {/* <Image source={{ uri: user.picture.large }} style={styles.photo} /> */}
+      <Image source={{ uri: users.picture.large }} style={styles.photo} />
       {willLike && (
         <View style={styles.likeBox}>
           <Text style={{...styles.textPrimary, color: '#64EDCC'}}>LIKE</Text>
@@ -20,11 +20,11 @@ export default function SwipeImage({ user, willLike, willPass }) {
 
       <View style={styles.textContainer}>
         <View style={styles.textRow}>
-          {/* <Text style={[styles.textPrimary, styles.textShadow]}>{user.name.first}</Text> */}
-          {/* <Text style={[styles.textSecondary, styles.textShadow]}>{user.dob.age}</Text> */}
+          <Text style={[styles.textPrimary, styles.textShadow]}>{users.name.first}</Text>
+          <Text style={[styles.textSecondary, styles.textShadow]}>{users.dob.age}</Text>
         </View>
         <View style={styles.textRow}>
-        {/* <Text style={[styles.textSecondary, styles.textShadow]}>{user.location.city}</Text> */}
+        <Text style={[styles.textSecondary, styles.textShadow]}>{users.location.city}</Text>
         </View>
       </View>
     </View>

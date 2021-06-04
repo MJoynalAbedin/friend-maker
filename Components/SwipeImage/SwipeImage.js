@@ -5,26 +5,26 @@ import { View, Image, StyleSheet, Text } from "react-native";
 export default function SwipeImage({ users, willLike, willPass }) {
   return (
     <View>
-      <Image source={{ uri: users.picture.large }} style={styles.photo} />
+      {/* <Image source={{ uri: users.picture.large }} style={styles.photo} /> */}
       {willLike && (
         <View style={styles.likeBox}>
-          <Text style={{...styles.textPrimary, color: '#64EDCC'}}>LIKE</Text>
+          {/* <Text style={{...styles.textPrimary, color: '#64EDCC'}}>LIKE</Text> */}
         </View>
       )}
 
       {willPass && (
         <View style={styles.passBox}>
-          <Text style={{...styles.textPrimary, color: '#F06795'}}>LIKE</Text>
+          {/* <Text style={{...styles.textPrimary, color: '#F06795'}}>LIKE</Text> */}
         </View>
       )}
 
       <View style={styles.textContainer}>
         <View style={styles.textRow}>
-          <Text style={[styles.textPrimary, styles.textShadow]}>{users.name.first}</Text>
-          <Text style={[styles.textSecondary, styles.textShadow]}>{users.dob.age}</Text>
+          {/* <Text style={[styles.textPrimary, styles.textShadow]}>{users.name.first}</Text> */}
+          {/* <Text style={[styles.textSecondary, styles.textShadow]}>{users.dob.age}</Text> */}
         </View>
         <View style={styles.textRow}>
-        <Text style={[styles.textSecondary, styles.textShadow]}>{users.location.city}</Text>
+        {/* <Text style={[styles.textSecondary, styles.textShadow]}>{users.location.city}</Text> */}
         </View>
       </View>
     </View>

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { FontAwesome5, FontAwesome } from "@expo/vector-icons";
-export default function Topbar() {
+export default function TopBar() {
   return (
     <View style={styles.container}>
       <FontAwesome name="user" size={27} color="#5c5c5c" />

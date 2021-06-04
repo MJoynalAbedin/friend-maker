@@ -29,12 +29,44 @@ export default function App() {
     getUsers();
   }, []);
 
+  function handleLike(){
+    console.log("like")
+    nextUser()
+  }
+
+  function handlePass(){
+    console.log("pass")
+    nextUser()
+  }
+  function nextUser(){
+    const nextIndex = users.length -2 === currentIndex ? 0  : currentIndex + 1
+  setCurrentIndex(nextIndex)
+  
+  }
+
+  function handleLikePress(){
+    
+  }
+
+  function handlePassPress(){
+
+  }
   return (
     <View style={styles.container}>
       <Topbar />
       <View style={styles.swipes}>
-        {users.length > 1 && <Swipes></Swipes>}
-      <BottomBar/>
+        {users.length > 1 && users.map((u, i) =>
+         currentIndex === i && (
+        <Swipes 
+        key={i} 
+        currentIndex={currentIndex} 
+        users={users}
+         handleLike={handleLike} 
+         handlePass={handlePass}>
+
+         </Swipes>
+        ))}
+      <BottomBar handleLikePress={handleLikePress} handlePassPress={handlePassPress}/>
       </View>
       
     </View>

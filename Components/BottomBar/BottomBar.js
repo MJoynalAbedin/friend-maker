@@ -1,7 +1,7 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 
-export default function BottomBar(){
+export default function BottomBar(handleLikePress, handlePassPress){
    return(
        <View style={styles.container}>
            <View/>
